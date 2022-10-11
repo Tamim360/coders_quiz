@@ -11,7 +11,8 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home/>
+                element: <Home />,
+                loader: async () => fetch('https://openapi.programming-hero.com/api/quiz')
             },
         ]
     }

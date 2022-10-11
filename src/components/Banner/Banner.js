@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaCode } from 'react-icons/fa'
 import { Player } from '@lottiefiles/react-lottie-player';
 
 
