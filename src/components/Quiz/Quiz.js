@@ -1,6 +1,5 @@
-import { Player } from '@lottiefiles/react-lottie-player';
 import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Quiz = ({ quiz }) => {
     // console.log(quiz);
@@ -11,7 +10,7 @@ const Quiz = ({ quiz }) => {
             <div className="flex items-center justify-between mt-8">
                 <p className="font-bold">Total Quiz: {quiz.total}</p>
                 <button className="font-bold py-2 px-4 rounded text-violet-600 bg-white hover:shadow-xl">
-                     Take the quiz
+                    <Link to={`/quiz/${quiz.id}`}>Take the quiz</Link>
                 </button>
             </div>
         </div>
