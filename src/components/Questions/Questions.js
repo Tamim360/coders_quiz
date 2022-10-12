@@ -8,8 +8,12 @@ const Questions = ({ question , setCorrect }) => {
     const [clicked, setClicked] = useState(null)
     const [showCorrect, setShowCorrect] = useState(null)
 
-    const showCorrectAnswer = (e) => {
-       setShowCorrect(true)
+    const showCorrectAnswer = () => {
+        setShowCorrect(true)
+        toast.success(`Correct Answer is: ${correctAnswer}`, {
+            position: "top-center",
+            autoClose: 1500
+        })
     }
 
     const checkAnswer = (e) => {
@@ -34,12 +38,12 @@ const Questions = ({ question , setCorrect }) => {
     return (
         <div>
             
-            <div className="border rounded p-3 m-2 max-w-2xl mx-auto bg-slate-50 shadow-xl">
+            <div className={`${clicked && 'pointer-events-none'} border rounded p-3 m-2 max-w-2xl mx-auto bg-slate-50 shadow-xl ${showCorrect && 'pointer-events-none'}`}>
                 <div className="md:flex justify-between items-center">
                     <h2 className="text-xl font-bold">{title}</h2>
-                    <button onClick={(e) => showCorrectAnswer(e)} className="font-bold mt-8 md:mt-0 md:ml-8" title="Show Answer"><FaEye/></button>
+                    <button onClick={() => showCorrectAnswer()} className="font-bold mt-8 md:mt-0 md:ml-8" title="Show Answer"><FaEye/></button>
                 </div>
-            <div className={`${clicked && 'pointer-events-none'} ${showCorrect && 'pointer-events-none'} grid grid-cols-1 md:grid-cols-2 max-w-xl mx-auto gap-3 my-8`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 max-w-xl mx-auto gap-3 my-8`}>
                 {
                         options.map(option => {
                             if (showCorrect) {

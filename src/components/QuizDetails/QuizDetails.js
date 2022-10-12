@@ -16,7 +16,7 @@ const QuizDetails = () => {
 
             <div onClick={() => setIsHidden(true)} className={`${isHidden ? 'scale-0' : 'scale-100'} duration-100 bg-slate-900/70 flex justify-center items-center w-full h-screen z-10 fixed top-0 left-0`}>
                 <div className="max-w-xl p-8 rounded bg-green-600 text-white">
-                    <h2 className="text-xl font-bold">Congrats on completion the quiz.</h2>
+                    <h2 className="text-xl font-bold">Congrats on completing the quiz.</h2>
                     <h2 className="text-2xl font-bold">Your Score is: {correctAnswer}/{total}</h2>
                 </div>
             </div>
