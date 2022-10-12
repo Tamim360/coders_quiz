@@ -8,7 +8,7 @@ export const QuizesContext = createContext([])
 const Home = () => {
     const quizes = useLoaderData()
     return (
-        <div>
+        <div className="mb-8">
             <QuizesContext.Provider value={quizes.data}>
                 <Banner />
                 <Quizes />

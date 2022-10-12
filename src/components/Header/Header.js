@@ -1,55 +1,55 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaCode } from "react-icons/fa";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
     return (
-      <div class="px-4 py-5 w-full md:px-24 lg:px-8 bg-violet-600 text-white">
-        <div class="relative flex items-center justify-between">
-          <div class="flex items-center w-full">
+      <div className="px-4 py-5 w-full md:px-24 lg:px-8 bg-violet-600 text-white">
+        <div className="relative flex items-center justify-between">
+          <div className="flex items-center w-full">
             <Link
               to="/"
               aria-label="CoersQuiz"
               title="CoersQuiz"
-              class="inline-flex items-center mr-8"
+              className="inline-flex items-center mr-8"
             >
               <FaCode className="text-2xl"/>
-              <span class="ml-2 text-xl font-bold tracking-wide uppercase">
+              <span className="ml-2 text-xl font-bold tracking-wide uppercase">
                 CodersQuiz
               </span>
             </Link>
-            <ul class="flex items-center hidden space-x-8 lg:flex ml-auto">
+            <ul className="flex items-center hidden space-x-8 lg:flex ml-auto">
               <li>
-                <Link
+                <NavLink
                   to="/"
                   aria-label="Topics"
                   title="Topics"
-                  class="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Topics
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/statistics"
                   aria-label="Statistics"
                   title="Statistics"
-                  class="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Statistics
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/blogs"
                   aria-label="Blogs"
                   title="Blogs"
-                  class="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Blogs
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -57,7 +57,7 @@ export const Header = () => {
             <button
               aria-label="Open Menu"
               title="Open Menu"
-              class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+              className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg class="w-5 text-white" viewBox="0 0 24 24">
@@ -76,18 +76,18 @@ export const Header = () => {
               </svg>
             </button>
             {isMenuOpen && (
-              <div class="absolute top-0 left-0 w-full">
-                <div class="p-5 bg-white border rounded shadow-sm">
-                  <div class="flex items-center justify-between mb-4">
+              <div className="absolute top-0 left-0 w-full">
+                <div className="p-5 bg-white border rounded shadow-sm">
+                  <div className="flex items-center justify-between mb-4">
                     <div>
                       <Link
                         to="/"
                         aria-label="CodersQuiz"
                         title="CodersQuiz"
-                        class="inline-flex items-center"
+                        className="inline-flex items-center"
                       >
                         <FaCode className="text-2xl text-black"/>
-                        <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         CodersQuiz
                         </span>
                       </Link>
@@ -96,10 +96,10 @@ export const Header = () => {
                       <button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                        <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
                           <path
                             fill="currentColor"
                             d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
@@ -109,36 +109,37 @@ export const Header = () => {
                     </div>
                   </div>
                   <nav>
-                    <ul class="space-y-4">
+                    <ul className="space-y-4">
                       <li>
-                        <Link
+                        <NavLink
                           to="/"
                           aria-label="Topics"
                           title="Topics"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Topics
-                        </Link>
+                        </NavLink>
                       </li>
                       <li>
-                        <Link
+                        <NavLink
                           to="/statistics"
                           aria-label="Statistics"
                           title="Statistics"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Statistics
-                        </Link>
+                        </NavLink>
                       </li>
                       <li>
-                        <Link
+                        <NavLink
+                          
                           to="/blogs"
                           aria-label="Blogs"
                           title="Blogs"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={` font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400`}
                         >
                           Blogs
-                        </Link>
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>
