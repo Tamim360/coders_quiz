@@ -2,7 +2,7 @@
 
 ## Site Name: Coders Quiz
 
-Live site link: [Coders Quiz](https://amazing-melba-2fc881.netlify.app/).
+Live site link: [Coders Quiz](https://coders-quiz-360.netlify.app/).
 ____
 ## Features used:
 
@@ -15,6 +15,6 @@ ____
 
 ## How to use it?
 
-- Go to [Coders Quiz](https://amazing-melba-2fc881.netlify.app/)
+- Go to [Coders Quiz](https://coders-quiz-360.netlify.app/)
 - Select the query you want to perticipate
 - And play...
