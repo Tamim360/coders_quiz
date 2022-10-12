@@ -8,35 +8,39 @@ import Error from "../Error";
 import Main from "../layouts/Main";
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main />,
-        errorElement: <Error />,
-        children: [
-            {
-                path: '/',
-                element: <Home />,
-                loader: async () => fetch('https://openapi.programming-hero.com/api/quiz')
-            },
-            {
-                path: '/quiz/:quizId',
-                element: <QuizDetails />,
-                loader: async ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
-            },
-            {
-                path: '/statistics',
-                element: <Statistics />,
-                loader: async () => fetch('https://openapi.programming-hero.com/api/quiz')
-            },
-            {
-                path: '/blogs',
-                element: <Blogs />
-            },
-            {
-                path: '/blog/:blogId',
-                element: <Blog/>
-            }
-        ]
-    }
-    
-])
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        loader: async () =>
+          fetch("https://openapi.programming-hero.com/api/quiz"),
+      },
+      {
+        path: "/quiz/:quizId",
+        element: <QuizDetails />,
+        loader: async ({ params }) =>
+          fetch(
+            `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+          ),
+      },
+      {
+        path: "/statistics",
+        element: <Statistics />,
+        loader: async () =>
+          fetch("https://openapi.programming-hero.com/api/quiz"),
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/blog/:blogId",
+        element: <Blog />,
+      },
+    ],
+  },
+]);
