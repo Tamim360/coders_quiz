@@ -22,34 +22,34 @@ export const Header = () => {
             </Link>
             <ul class="flex items-center hidden space-x-8 lg:flex ml-auto">
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   aria-label="Topics"
                   title="Topics"
                   class="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Topics
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   aria-label="Statistics"
                   title="Statistics"
                   class="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Statistics
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   aria-label="Blogs"
                   title="Blogs"
                   class="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Blogs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -80,8 +80,8 @@ export const Header = () => {
                 <div class="p-5 bg-white border rounded shadow-sm">
                   <div class="flex items-center justify-between mb-4">
                     <div>
-                      <a
-                        href="/"
+                      <Link
+                        to="/"
                         aria-label="CodersQuiz"
                         title="CodersQuiz"
                         class="inline-flex items-center"
@@ -90,7 +90,7 @@ export const Header = () => {
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         CodersQuiz
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <div>
                       <button
@@ -111,34 +111,34 @@ export const Header = () => {
                   <nav>
                     <ul class="space-y-4">
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to="/"
                           aria-label="Topics"
                           title="Topics"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Topics
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to="/"
                           aria-label="Statistics"
                           title="Statistics"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Statistics
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to="/"
                           aria-label="Blogs"
                           title="Blogs"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Blogs
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </nav>
