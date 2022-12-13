@@ -5,8 +5,8 @@ import Questions from "../Questions/Questions";
 const QuizDetails = () => {
   const quiz = useLoaderData();
   const { questions, total } = quiz.data;
-  const [correctAnswer, setCorrectAnswer] = useState(0);
   const [isHidden, setIsHidden] = useState(true);
+  const [correctAnswer, setCorrectAnswer] = useState(0);
   const setCorrect = () => {
     setCorrectAnswer((prev) => prev + 1);
   };
